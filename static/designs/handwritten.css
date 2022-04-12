@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower:wght@400;700&display=swap');
+
+:root {
+    --top-bar-background-color: #fdd4fd;
+    --top-bar-foreground-color: #000000;
+    --accent-background-color: #ff9fb2;
+    --accent-foreground-color: #000000;
+    --tag-background-color: #91e9ff;
+    --tag-border-color: #0acdff;
+    --tag-foreground-color: #000000;
+    --background-color: #fbdce2;
+    --foreground-color: #000000;
+    --top-bar-team-name-font-family: 'Indie Flower', sans-serif;
+    --top-bar-team-description-font-family: 'Indie Flower', sans-serif;
+    --top-bar-team-name-font-weight: 700;
+    --top-bar-team-description-font-weight: 400;
+    --accent-font-family: 'Indie Flower', sans-serif;
+    --font-family: 'Indie Flower', sans-serif;
+    --accent-background-color-filter: invert(71%) sepia(9%) saturate(3074%)
+        hue-rotate(306deg) brightness(109%) contrast(108%);
+}

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@400;700&display=swap');
+
+:root {
+    --top-bar-background-color: #28965a;
+    --top-bar-foreground-color: #000000;
+    --accent-background-color: #2ceaa3;
+    --accent-foreground-color: #000000;
+    --tag-background-color: #b38a58;
+    --tag-border-color: #ec962c;
+    --tag-foreground-color: #000000;
+    --background-color: #b8fff8;
+    --foreground-color: #000000;
+    --top-bar-team-name-font-family: 'Sansita Swashed', sans-serif;
+    --top-bar-team-description-font-family: 'Sansita Swashed', sans-serif;
+    --top-bar-team-name-font-weight: 700;
+    --top-bar-team-description-font-weight: 400;
+    --accent-font-family: 'Sansita Swashed', sans-serif;
+    --font-family: 'Sansita Swashed', sans-serif;
+    --accent-background-color-filter: invert(78%) sepia(81%) saturate(443%)
+        hue-rotate(88deg) brightness(96%) contrast(91%);
+}

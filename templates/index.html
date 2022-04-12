@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='designs/' + design + '.css') }}"
+        />
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}"
+        />
+        <link
+            rel="icon"
+            href="{{ url_for('static', filename='favicon.png') }}"
+            type="image/png"
+        />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="top-bar">
+            <span id="team-name"> TEAM NAME </span>
+            <span id="team-description"> Food Extravaganza </span>
+        </div>
+        <div id="reviews-wrapper">
+            <div id="reviews-popup">
+                <div id="reviews-popup-close-button">&#10006;</div>
+                <div id="reviews-popup-title">Customer Reviews</div>
+                <div id="reviews-popup-write">
+                    <div class="reviews-popup-subtitle">Write a Review</div>
+                    Star rating:
+                    <form id="review-form" action="/submit" method="POST">
+                        <input
+                            id="reviews-popup-write-number"
+                            type="number"
+                            max="5"
+                            min="0"
+                            name="star-rating"
+                        />
+                        / 5<br />
+                        <textarea
+                            id="reviews-popup-write-textarea"
+                            name="review"
+                        ></textarea
+                        ><br />
+                        <input
+                            type="submit"
+                            id="reviews-popup-submit"
+                            value="Submit Review"
+                        />
+                    </form>
+                </div>
+                <div id="reviews-popup-customer-reviews">
+                    <div class="reviews-popup-subtitle">Reviews</div>
+                    <div class="review">
+                        <div class="star-rating"> ★★★★☆ &ndash; 4/5 stars </div>
+                        <div class="review-body"> Tastes good! </div>
+                    </div>
+                    <div class="review">
+                        <div class="star-rating"> ★★★★★ &ndash; 5/5 stars </div>
+                        <div class="review-body"> Loved it, great </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <div id="image-scroller-container">
+                <div id="image-scroller-gradient-overlay">
+                    <div id="image-scroller-up-button-wrapper" class="desktop">
+                    </div>
+                    <div
+                        id="image-scroller-down-button-wrapper"
+                        class="desktop"
+                    >
+                    </div>
+                    <div id="image-scroller-swipe-hint" class="mobile">
+                        <img
+                            src="{{ url_for('static',
+                        filename='icons/swipe-hint.png') }}"
+                            width="170"
+                            style="margin-bottom: 20px"
+                        />
+                        Swipe to scroll
+                    </div>
+                </div>
+                <div id="carousel-wrapper">
+                    <div id="carousel"></div>
+                </div>
+            </div>
+            <div id="dish-body-wrapper">
+                <div id="dish-body">
+                    <div id="dish-name">Dish Name</div>
+                    <div id="dish-description">Dish Description</div>
+                    <div id="dish-tags">
+                        <span> Gluten Free </span> <span> Vegetarian </span>
+                    </div>
+                    <div id="dish-fields">
+                        <b>Ingredients</b>
+                        <p>Your ingredients here...</p>
+                        <b>Allergies</b>
+                        <p>May contain...</p>
+                        <b>Custom text here...</b>
+                        <p
+                            >Colours and fonts are also customisable<br />Colours
+                            and fonts are also customisable<br />Colours and
+                            fonts are also customisable<br />Colours and fonts
+                            are also customisable<br />Colours and fonts are
+                            also customisable<br />Colours and fonts are also
+                            customisable</p
+                        >
+                    </div>
+                </div>
+                <div id="ar-button-wrapper" class="desktop">
+                    <div id="button-desktop"> Customer Reviews </div>
+                </div>
+            </div>
+            <div id="button-mobile" class="mobile"> Customer Reviews </div>
+        </div>
+        <script>
+            window.product = `{{ product }}`
+            window['dishes-server'] = `{{ dishes|safe }}`
+            window.reviews = `{{ reviews }}`
+        </script>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
+</html>

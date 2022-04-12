@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+
+:root {
+    --top-bar-background-color: #648de5;
+    --top-bar-foreground-color: #000000;
+    --accent-background-color: #9eb7e5;
+    --accent-foreground-color: #000000;
+    --tag-background-color: #4f69a3;
+    --tag-border-color: #304c89;
+    --tag-foreground-color: #000000;
+    --background-color: #e8e5da;
+    --foreground-color: #000000;
+    --top-bar-team-name-font-family: 'PT Serif', sans-serif;
+    --top-bar-team-description-font-family: 'PT Serif', sans-serif;
+    --top-bar-team-name-font-weight: 700;
+    --top-bar-team-description-font-weight: 400;
+    --accent-font-family: 'PT Serif', sans-serif;
+    --font-family: 'PT Serif', sans-serif;
+    --accent-background-color-filter: invert(78%) sepia(3%) saturate(6866%)
+        hue-rotate(189deg) brightness(98%) contrast(83%);
+}
